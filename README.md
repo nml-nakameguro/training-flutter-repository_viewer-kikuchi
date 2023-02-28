@@ -111,7 +111,7 @@ Please create Personal Access Token below scopes
 ┌───▼────┐
 │ entity │
 └───▲────┘
-    │ Provide implementation
+    │ 
 ┌───┴────┐
 │graphql │
 └────────┘
