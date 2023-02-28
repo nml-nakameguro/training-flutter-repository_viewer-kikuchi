@@ -60,10 +60,13 @@ This app was created for training Flutter and its code
     ```
     make ios-cert
     ```
+
 </details>
 
 ## Github token Setting
+
 Please create Personal Access Token below scopes
+
 - [x] : repo
     - [x] : repo:status
     - [x] : repo_deployment
@@ -74,3 +77,42 @@ Please create Personal Access Token below scopes
     - [ ] : write:org
     - [x] : read:org
     - [ ] : manage_runners:org
+
+## Code structure
+
+### Directories
+
+```
+├── android                  Android app files
+├── assets                   Asset files for Flutter
+├── ios                      iOS app files
+│   ├── Runner.xcworkspace       Xcode workspace file
+│   └── fastlane                 Fastlane files(will be added at first time ios build)
+├── lib                      Flutter app files
+│   ├── entity                   Independent data class
+│   ├── gen                      Generated files (graphql, rest api, riverpod)
+│   ├── graphql                  Graphql query files and shema file
+│   ├── provider                 Defintions of Riverpod providers
+│   └── ui                       UI layer
+└── test                     Test files
+```
+### Layering
+
+```
+┌────────┐
+│ UI     │
+└───┬────┘
+    │  
+┌───▼────┐
+│ Hooks  │
+│Provider│
+└───┬────┘
+    │ Use
+┌───▼────┐
+│ entity │
+└───▲────┘
+    │ Provide implementation
+┌───┴────┐
+│graphql │
+└────────┘
+```
