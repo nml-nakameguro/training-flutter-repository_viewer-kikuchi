@@ -232,7 +232,7 @@ iOSInjectionProject/
 
 # Generated files
 bin/
-gen/
+#gen/
 out/
 
 # Gradle files
