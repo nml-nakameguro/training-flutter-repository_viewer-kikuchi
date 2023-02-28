@@ -107,7 +107,7 @@ Please create Personal Access Token below scopes
 │ Hooks  │
 │Provider│
 └───┬────┘
-    │ Use
+    │ 
 ┌───▼────┐
 │ entity │
 └───▲────┘
